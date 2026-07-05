@@ -904,3 +904,138 @@ footer p{
         grid-template-columns:1fr;
     }
 }
+/* ===================================================
+   PROCESS SECTION
+=================================================== */
+
+.process{
+    background:#fff;
+}
+
+.process-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:25px;
+}
+
+.process-step{
+    background:var(--light);
+    padding:30px;
+    border-radius:var(--radius);
+    box-shadow:var(--shadow);
+    transition:var(--transition);
+}
+
+.process-step h3{
+    color:var(--primary);
+    margin-bottom:10px;
+}
+
+.process-step:hover{
+    transform:translateY(-8px);
+}
+
+/* ===================================================
+   WHY CHOOSE US
+=================================================== */
+
+.why{
+    background:#f8fafc;
+}
+
+.why-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.why-item{
+    background:#fff;
+    padding:30px;
+    border-radius:var(--radius);
+    box-shadow:var(--shadow);
+    text-align:center;
+    transition:var(--transition);
+}
+
+.why-item h3{
+    color:var(--primary);
+    margin-bottom:10px;
+}
+
+.why-item:hover{
+    transform:translateY(-8px);
+}
+
+/* ===================================================
+   TESTIMONIALS
+=================================================== */
+
+.testimonials{
+    background:#fff;
+}
+
+.testimonial-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.testimonial{
+    background:var(--light);
+    padding:30px;
+    border-radius:var(--radius);
+    box-shadow:var(--shadow);
+    font-style:italic;
+    transition:var(--transition);
+}
+
+.testimonial h4{
+    margin-top:15px;
+    color:var(--primary);
+}
+
+.testimonial:hover{
+    transform:translateY(-8px);
+}
+
+/* ===================================================
+   FAQ
+=================================================== */
+
+.faq{
+    background:#f8fafc;
+}
+
+.faq-item{
+    background:#fff;
+    padding:25px;
+    margin-bottom:15px;
+    border-radius:var(--radius);
+    box-shadow:var(--shadow);
+}
+
+.faq-item h3{
+    color:var(--primary);
+    margin-bottom:8px;
+}
+
+/* ===================================================
+   FINAL CTA
+=================================================== */
+
+.final-cta{
+    background:linear-gradient(135deg, var(--primary), var(--secondary));
+    text-align:center;
+    color:#fff;
+}
+
+.final-cta p{
+    color:rgba(255,255,255,0.85);
+    margin:15px 0 30px;
+}
+
+.final-cta .primary-btn{
+    background:#fff;
+    color:var(--primary);
+}
