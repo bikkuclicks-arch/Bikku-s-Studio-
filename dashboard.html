@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard | Bikkus Studio</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header>
+
+    <div class="container">
+
+        <a href="../index.html" class="logo">
+            <h2>Bi_Kku</h2>
+        </a>
+
+        <nav>
+
+            <ul>
+
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../services.html">Services</a></li>
+                <li><a href="../portfolio.html">Portfolio</a></li>
+                <li><a href="../pricing.html">Pricing</a></li>
+                <li><a href="../contact.html">Contact</a></li>
+                <li><a href="../login.html">Logout</a></li>
+
+            </ul>
+
+        </nav>
+
+    </div>
+
+</header>
+
+<!-- ================= DASHBOARD ================= -->
+
+<section class="page-hero">
+
+    <div class="container">
+
+        <h1>Client Dashboard</h1>
+
+        <p id="welcomeText">Welcome back!</p>
+
+    </div>
+
+</section>
+
+<!-- ================= DASHBOARD CONTENT ================= -->
+
+<section class="services">
+
+    <div class="container">
+
+        <div class="services-grid">
+
+            <div class="service-card">
+                <h3>Active Projects</h3>
+                <p>View your ongoing work status.</p>
+            </div>
+
+            <div class="service-card">
+                <h3>Preview Files</h3>
+                <p>Check your design previews.</p>
+            </div>
+
+            <div class="service-card">
+                <h3>Payments</h3>
+                <p>View invoices and payment status.</p>
+            </div>
+
+            <div class="service-card">
+                <h3>Messages</h3>
+                <p>Chat with your designer.</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= LOGOUT SCRIPT ================= -->
+
+<script type="module">
+
+import { auth } from "../js/firebase.js";
+import { onAuthStateChanged, signOut } 
+from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
+
+const welcomeText = document.getElementById("welcomeText");
+
+// Check login state
+onAuthStateChanged(auth, (user) => {
+
+    if (user) {
+        welcomeText.textContent = "Welcome, " + user.email;
+    } else {
+        window.location.href = "../login.html";
+    }
+
+});
+
+// Logout (when clicking logout link)
+const logoutLink = document.querySelector('a[href="../login.html"]');
+
+logoutLink.addEventListener("click", async (e) => {
+    e.preventDefault();
+    await signOut(auth);
+    window.location.href = "../login.html";
+});
+
+</script>
+
+</body>
+</html>
