@@ -160,4 +160,36 @@ img:hover {
 
     transform: scale(1.03);
 
+}/* ==========================
+   RIPPLE EFFECT
+========================== */
+
+.primary-btn,
+.secondary-btn{
+
+    position:relative;
+    overflow:hidden;
+
+}
+
+.ripple{
+
+    position:absolute;
+    border-radius:50%;
+    background:rgba(255,255,255,.35);
+    transform:scale(0);
+    animation:rippleEffect .6s linear;
+    pointer-events:none;
+
+}
+
+@keyframes rippleEffect{
+
+    to{
+
+        transform:scale(4);
+        opacity:0;
+
+    }
+
 }
