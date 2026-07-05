@@ -1038,4 +1038,166 @@ footer p{
 .final-cta .primary-btn{
     background:#fff;
     color:var(--primary);
+}/* ===================================================
+   PAGE HERO (ALL INNER PAGES)
+=================================================== */
+
+.page-hero{
+    padding:120px 0 80px;
+    text-align:center;
+    background:#f8fafc;
+}
+
+.page-hero h1{
+    font-size:48px;
+    margin-bottom:10px;
+}
+
+.page-hero p{
+    color:var(--gray);
+    max-width:600px;
+    margin:0 auto;
+}
+
+/* ===================================================
+   PRICING PAGE
+=================================================== */
+
+.pricing{
+    background:#fff;
+}
+
+.pricing-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.pricing-card{
+    background:#fff;
+    padding:40px 30px;
+    border-radius:var(--radius);
+    box-shadow:var(--shadow);
+    text-align:center;
+    transition:var(--transition);
+}
+
+.pricing-card h2{
+    font-size:36px;
+    margin:15px 0;
+    color:var(--primary);
+}
+
+.pricing-card ul{
+    list-style:none;
+    padding:0;
+    margin:20px 0;
+}
+
+.pricing-card ul li{
+    padding:8px 0;
+    color:var(--gray);
+}
+
+.pricing-card:hover{
+    transform:translateY(-10px);
+}
+
+.pricing-card.highlight{
+    border:2px solid var(--primary);
+    transform:scale(1.05);
+}
+
+/* ===================================================
+   ABOUT PAGE
+=================================================== */
+
+.about{
+    background:#fff;
+}
+
+.about-content h2{
+    margin-top:30px;
+    color:var(--primary);
+}
+
+.about-content p{
+    color:var(--gray);
+    line-height:1.7;
+}
+
+/* TEAM SECTION */
+
+.team{
+    background:#f8fafc;
+    text-align:center;
+}
+
+.team-card{
+    background:#fff;
+    padding:40px;
+    max-width:500px;
+    margin:0 auto;
+    border-radius:var(--radius);
+    box-shadow:var(--shadow);
+}
+
+/* ===================================================
+   CONTACT PAGE
+=================================================== */
+
+.contact{
+    background:#fff;
+}
+
+.contact-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+    align-items:start;
+}
+
+.contact-info{
+    background:#f8fafc;
+    padding:30px;
+    border-radius:var(--radius);
+}
+
+.contact-form form{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+.contact-form input,
+.contact-form textarea{
+    padding:12px;
+    border:1px solid #ddd;
+    border-radius:8px;
+    outline:none;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus{
+    border-color:var(--primary);
+}
+
+/* ===================================================
+   RESPONSIVE FIXES
+=================================================== */
+
+@media(max-width:992px){
+
+    .pricing-grid{
+        grid-template-columns:1fr;
+    }
+
+    .contact-grid{
+        grid-template-columns:1fr;
+    }
+
+    .page-hero h1{
+        font-size:36px;
+    }
+
 }
