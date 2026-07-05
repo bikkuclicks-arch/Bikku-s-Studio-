@@ -765,4 +765,142 @@ footer p{
 
     color:var(--white);
 
+}/* ===================================================
+   SECTION HEADER
+=================================================== */
+
+.section-header{
+    text-align:center;
+    margin-bottom:60px;
+}
+
+.section-header h2{
+    margin-bottom:10px;
+}
+
+.section-header p{
+    max-width:600px;
+    margin:0 auto;
+    color:var(--gray);
+}
+
+/* ===================================================
+   SERVICES
+=================================================== */
+
+.services{
+    background:var(--white);
+}
+
+.services-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:25px;
+}
+
+.service-card{
+    background:#fff;
+    padding:30px;
+    border-radius:var(--radius);
+    box-shadow:var(--shadow);
+    transition:var(--transition);
+    text-align:center;
+}
+
+.service-card h3{
+    margin-bottom:10px;
+    color:var(--primary);
+}
+
+.service-card p{
+    font-size:15px;
+    color:var(--gray);
+}
+
+.service-card:hover{
+    transform:translateY(-10px);
+    background:var(--primary);
+    color:#fff;
+}
+
+.service-card:hover h3,
+.service-card:hover p{
+    color:#fff;
+}
+
+/* ===================================================
+   PORTFOLIO
+=================================================== */
+
+.portfolio-preview{
+    background:#f8fafc;
+}
+
+.portfolio-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.portfolio-item{
+    background:#e2e8f0;
+    height:180px;
+    border-radius:var(--radius);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:600;
+    color:#475569;
+    transition:var(--transition);
+}
+
+.portfolio-item:hover{
+    transform:scale(1.05);
+    background:var(--primary);
+    color:#fff;
+}
+
+/* ===================================================
+   STATS
+=================================================== */
+
+.stats{
+    background:linear-gradient(135deg, var(--primary), var(--secondary));
+    color:#fff;
+    text-align:center;
+}
+
+.stats-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:30px;
+}
+
+.stat-box h3{
+    font-size:40px;
+    margin-bottom:5px;
+}
+
+.stat-box p{
+    color:rgba(255,255,255,0.85);
+}
+
+/* ===================================================
+   RESPONSIVE FIX (small adjustment)
+=================================================== */
+
+@media(max-width:992px){
+    .services-grid,
+    .portfolio-grid,
+    .stats-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+@media(max-width:576px){
+    .services-grid,
+    .portfolio-grid,
+    .stats-grid{
+        grid-template-columns:1fr;
+    }
 }
