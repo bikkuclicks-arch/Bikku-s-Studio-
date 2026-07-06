@@ -1275,3 +1275,38 @@ footer p{
 .view-btn:hover{
     transform:translateY(-2px);
 }
+.messages-section{
+    margin:50px 40px;
+}
+
+.message-card{
+    background:#fff;
+    padding:25px;
+    border-radius:18px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.message-card textarea{
+    width:100%;
+    margin-top:20px;
+    padding:15px;
+    border:1px solid #ddd;
+    border-radius:10px;
+    resize:vertical;
+    font-size:16px;
+}
+
+.send-btn{
+    margin-top:20px;
+    padding:12px 24px;
+    border:none;
+    border-radius:10px;
+    background:#5b5bff;
+    color:#fff;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.send-btn:hover{
+    transform:translateY(-2px);
+}
