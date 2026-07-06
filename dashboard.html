@@ -20,7 +20,7 @@
 
     <div class="container">
 
-        <a href="../index.html" class="logo">
+        <a href="index.html" class="logo">
             <h2>Bi_Kku</h2>
         </a>
 
@@ -28,12 +28,12 @@
 
             <ul>
 
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="../services.html">Services</a></li>
-                <li><a href="../portfolio.html">Portfolio</a></li>
-                <li><a href="../pricing.html">Pricing</a></li>
-                <li><a href="../contact.html">Contact</a></li>
-                <li><a href="../login.html">Logout</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html">Logout</a></li>
 
             </ul>
 
@@ -107,18 +107,18 @@ onAuthStateChanged(auth, (user) => {
     if (user) {
         welcomeText.textContent = "Welcome, " + user.email;
     } else {
-        window.location.href = "../login.html";
+        window.location.href = "login.html";
     }
 
 });
 
 // Logout (when clicking logout link)
-const logoutLink = document.querySelector('a[href="../login.html"]');
+const logoutLink = document.querySelector('a[href="login.html"]');
 
 logoutLink.addEventListener("click", async (e) => {
     e.preventDefault();
     await signOut(auth);
-    window.location.href = "../login.html";
+    window.location.href = "login.html";
 });
 
 </script>
