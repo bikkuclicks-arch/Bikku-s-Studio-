@@ -50,7 +50,7 @@
 <!-- FIREBASE LOGIN SCRIPT -->
 <script type="module">
 
-import { auth } from "./js/firebase.js";
+import { auth } from "./firebase.js";
 import { signInWithEmailAndPassword } 
 from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
 
@@ -67,7 +67,7 @@ form.addEventListener("submit", async (e) => {
         await signInWithEmailAndPassword(auth, email, password);
 
         // redirect after login
-window.location.href = "dashboard.html";
+window.location.href = "admin.html";
     } catch (error) {
         errorMsg.textContent = error.message;
     }
