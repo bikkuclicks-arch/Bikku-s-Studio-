@@ -1237,4 +1237,41 @@ footer p{
     font-size:34px;
     font-weight:bold;
     color:#5b5bff;
+}.projects-section{
+    margin:50px 40px;
+}
+
+.section-title{
+    margin-bottom:20px;
+}
+
+.project-card{
+    background:#fff;
+    border-radius:18px;
+    padding:25px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.project-card h3{
+    margin-bottom:15px;
+}
+
+.status-progress{
+    color:#ff9800;
+    font-weight:700;
+}
+
+.view-btn{
+    margin-top:20px;
+    padding:12px 24px;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+    background:#5b5bff;
+    color:#fff;
+    transition:.3s;
+}
+
+.view-btn:hover{
+    transform:translateY(-2px);
 }
