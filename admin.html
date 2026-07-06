@@ -211,5 +211,36 @@
     </div>
 
 </section>
+    <script type="module">
+  import { db } from "./firebase-config.js";
+  import { collection, getDocs } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
+
+  async function loadMessages() {
+    const snapshot = await getDocs(collection(db, "messages"));
+
+    const inbox = document.querySelector(".messages-section .project-card");
+
+    let html = `<h3>Inbox</h3>`;
+
+    if (snapshot.empty) {
+      html += `<p>No messages yet.</p>`;
+    } else {
+      snapshot.forEach((doc) => {
+        const data = doc.data();
+
+        html += `
+          <div style="padding:10px;border:1px solid #ddd;margin:10px 0;">
+            <strong>Client:</strong> ${data.clientId} <br/>
+            <strong>Message:</strong> ${data.message}
+          </div>
+        `;
+      });
+    }
+
+    inbox.innerHTML = html;
+  }
+
+  loadMessages();
+</script>
 </body>
 </html>
