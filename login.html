@@ -66,9 +66,8 @@ form.addEventListener("submit", async (e) => {
     try {
         await signInWithEmailAndPassword(auth, email, password);
 
-        // redirect after login
-        window.location.href = "client/dashboard.html";
-
+        // redirect after login\\
+window.location.href = "dashboard.html";
     } catch (error) {
         errorMsg.textContent = error.message;
     }
