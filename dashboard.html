@@ -144,12 +144,36 @@
     </div>
 
 </section>
+    <section class="messages-section">
+
+    <div class="section-title">
+        <h2>Messages</h2>
+    </div>
+
+    <div class="message-card">
+
+        <h3>Bikkus Studio</h3>
+
+        <p>Welcome! You can communicate with us here regarding your project.</p>
+
+        <textarea
+            id="clientMessage"
+            placeholder="Type your message..."
+            rows="5"></textarea>
+
+        <button class="send-btn">
+            Send Message
+        </button>
+
+    </div>
+
+</section>
 
 <!-- ================= LOGOUT SCRIPT ================= -->
 
 <script type="module">
 
-import { auth } from "../js/firebase.js";
+import { auth } from "./firebase.js";
 import { onAuthStateChanged, signOut } 
 from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
 
