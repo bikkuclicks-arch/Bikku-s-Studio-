@@ -242,5 +242,24 @@
 
   loadMessages();
 </script>
+    <script type="module">
+  import { db } from "./firebase-config.js";
+  import { collection, getDocs } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
+
+  async function loadStats() {
+
+    const clientsSnap = await getDocs(collection(db, "clients"));
+    const projectsSnap = await getDocs(collection(db, "projects"));
+    const paymentsSnap = await getDocs(collection(db, "payments"));
+    const messagesSnap = await getDocs(collection(db, "messages"));
+
+    document.querySelectorAll(".card p")[0].innerText = clientsSnap.size;
+    document.querySelectorAll(".card p")[1].innerText = projectsSnap.size;
+    document.querySelectorAll(".card p")[2].innerText = paymentsSnap.size;
+    document.querySelectorAll(".card p")[3].innerText = messagesSnap.size;
+  }
+
+  loadStats();
+</script>
 </body>
 </html>
