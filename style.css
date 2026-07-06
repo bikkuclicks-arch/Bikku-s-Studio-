@@ -1347,3 +1347,12 @@ footer p{
 .payments-section{
     margin:50px 40px;
 }
+.messages-section{
+    margin:50px 40px;
+}
+
+.messages-section textarea{
+    width:100%;
+    min-height:120px;
+    resize:vertical;
+}
