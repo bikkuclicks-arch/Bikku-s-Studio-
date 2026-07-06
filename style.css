@@ -1310,3 +1310,20 @@ footer p{
 .send-btn:hover{
     transform:translateY(-2px);
 }
+.admin-table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:20px;
+}
+
+.admin-table th,
+.admin-table td{
+    padding:15px;
+    border-bottom:1px solid #e5e5e5;
+    text-align:left;
+}
+
+.admin-table th{
+    background:#f8f8f8;
+    font-weight:600;
+}
